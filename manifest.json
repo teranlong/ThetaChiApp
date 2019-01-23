@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "short_name": "My App",
-  "description": "My App description",
+  "name": "Theta Chi app",
+  "short_name": "Theta Chi app",
+  "description": "Theta Chi app description",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#3f51b5",
