@@ -214,9 +214,9 @@ class MyApp extends connect(store)(LitElement) {
           .opened="${this._drawerOpened}"
           @opened-changed="${this._drawerOpenedChanged}">
         <nav class="drawer-list">
-          <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-          <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
-          <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
+          <a ?selected="${this._page === 'view1'}" href="/view1">Dashboard</a>
+          <a ?selected="${this._page === 'view2'}" href="/view2">House Points</a>
+          <a ?selected="${this._page === 'view3'}" href="/view3">Choresg</a>
         </nav>
       </app-drawer>
 
