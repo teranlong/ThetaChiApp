@@ -204,6 +204,7 @@ class MyApp extends connect(store)(LitElement) {
         <!-- This gets hidden on a small screen-->
         <nav class="toolbar-list">
           <a ?selected="${this._page === 'view1'}" href="/view1">Dashboard</a>
+          <a ?selected="${this._page === 'view4'}" href="/view4">Calendar</a>
           <a ?selected="${this._page === 'view2'}" href="/view2">House Points</a>
           <a ?selected="${this._page === 'view3'}" href="/view3">Chores</a>
         </nav>
@@ -215,6 +216,7 @@ class MyApp extends connect(store)(LitElement) {
           @opened-changed="${this._drawerOpenedChanged}">
         <nav class="drawer-list">
           <a ?selected="${this._page === 'view1'}" href="/view1">Dashboard</a>
+          <a ?selected="${this._page === 'view4'}" href="/view4">Calendar</a>
           <a ?selected="${this._page === 'view2'}" href="/view2">House Points</a>
           <a ?selected="${this._page === 'view3'}" href="/view3">Chores</a>
         </nav>
@@ -223,6 +225,7 @@ class MyApp extends connect(store)(LitElement) {
       <!-- Main content -->
       <main role="main" class="main-content">
         <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
+        <my-view4 class="page" ?active="${this._page === 'view4'}"></my-view4>
         <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
         <my-view3 class="page" ?active="${this._page === 'view3'}"></my-view3>
         <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>

@@ -15,9 +15,6 @@ import { PageViewElement } from './page-view-element.js';
 import { SharedStyles } from './shared-styles.js';
 
 class MyView4 extends PageViewElement {
-  
- 
-
   static get styles() {
     return [
       SharedStyles
@@ -72,33 +69,3 @@ class MyView4 extends PageViewElement {
 }
 
 window.customElements.define('my-view4', MyView4);
-
-
-/*
-`
-    <style>
-    .googleCalendar{
-      position: relative;
-      height: 0;
-      width: 100%;
-      padding-bottom: 100%;
-    }
-    
-    .googleCalendar iframe{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    </style>
-    <section>
-      <h2>Calendar</h2>
-    </section>
-    <section>
-    <div class="googleCalendar">
-      <iframe src="https://calendar.google.com/calendar/embed?src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
-    </section>
-    `;
-    */
