@@ -33,7 +33,10 @@ class MyView1 extends PageViewElement {
         <p>Welcome to your ThetaChi app. This is some bs sample text that Nate put in, but at least we know how to do this now.</p>
       </section>
       <section>
-        <p>Section 2 of the BS text area</p>
+      <h2>Pro tip:</h2>
+        <p>Try this app on your phone or desktop. The link is the same. Add to home screen for a more applike expirience.</p>
+        <p>On Android press the "add to homescreen" prompt that pops up at the bottom. On IOS (Safari) press the button at the bottom of the page that looks like square with an arrow trying to excape then press "add to homescreen". On web (chrome) press the three dots in the top right corner then press "install theta chi app".<p>
+        <p>Close the app and reload from the home screen icon for a more app-like feel<p> 
       </section>
     `;
   }

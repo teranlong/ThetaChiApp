@@ -31,14 +31,16 @@ class MyView4 extends PageViewElement {
     }
     @media (min-width: 550px) {
         .small-container {
+            padding-top: 60%;
+            padding-bottom: 60%;
             display: none;
         }
     }
     /* Responsive iFrame */
     .responsive-iframe-container {
         position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
+        padding-top: 55%;
+        padding-bottom: 55%;
         height: 0;
         overflow: hidden;
     }
@@ -62,7 +64,7 @@ class MyView4 extends PageViewElement {
     </div>
 
     <div class="responsive-iframe-container small-container">
-    <iframe src="https://calendar.google.com/calendar/embed?title=Social%20Schedule&amp;showDate=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffcc33&amp;src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?title=Social%20Schedule&amp;showDate=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23ffcc33&amp;src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:0" frameborder="0" scrolling="no"></iframe>
     </div>
     `
   }

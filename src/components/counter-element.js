@@ -34,7 +34,7 @@ class CounterElement extends LitElement {
       ButtonSharedStyles,
       css`
         span {
-          width: 20px;
+          width: 40px;
           display: inline-block;
           text-align: center;
           font-weight: bold;
@@ -43,12 +43,12 @@ class CounterElement extends LitElement {
     ];
   }
 
+  // Clicked: <span>${this.clicks}</span> times.
+  // Value is <span>${this.value}</span>.
   render() {
     return html`
       <div>
         <p>
-          Clicked: <span>${this.clicks}</span> times.
-          Value is <span>${this.value}</span>.
           <button @click="${this._onIncrement}" title="Add 1">${plusIcon}</button>
           <button @click="${this._onDecrement}" title="Minus 1">${minusIcon}</button>
         </p>
