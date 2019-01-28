@@ -4,8 +4,8 @@
   "description": "Theta Chi app description",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#BF0001",
+  "background_color": "#BF0001",
   "icons": [
     {
       "src": "images/manifest/icon-196x196.png",
