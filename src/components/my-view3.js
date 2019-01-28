@@ -80,7 +80,7 @@ class MyView3 extends connect(store)(PageViewElement) {
   render() {
     return html`
       <section>
-        <h2>Do your motherfricking chore</h2>
+        <h2>Do your chore</h2>
       </section>
     `;
   }
