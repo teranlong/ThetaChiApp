@@ -206,7 +206,7 @@ class MyApp extends connect(store)(LitElement) {
           <a ?selected="${this._page === 'view1'}" href="/view1">Dashboard</a>
           <a ?selected="${this._page === 'view4'}" href="/view4">Calendar</a>
           <a ?selected="${this._page === 'view2'}" href="/view2">House Points</a>
-          <a ?selected="${this._page === 'view3'}" href="/view3">Chores</a>
+          <a ?selected="${this._page === 'view3'}" href="/view3">Blacklist</a>
         </nav>
       </app-header>
 
@@ -218,7 +218,7 @@ class MyApp extends connect(store)(LitElement) {
           <a ?selected="${this._page === 'view1'}" href="/view1">Dashboard</a>
           <a ?selected="${this._page === 'view4'}" href="/view4">Calendar</a>
           <a ?selected="${this._page === 'view2'}" href="/view2">House Points</a>
-          <a ?selected="${this._page === 'view3'}" href="/view3">Chores</a>
+          <a ?selected="${this._page === 'view3'}" href="/view3">Blacklist</a>
         </nav>
       </app-drawer>
 

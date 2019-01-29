@@ -73,6 +73,57 @@ class MyView3 extends connect(store)(PageViewElement) {
           font-weight: bold;
           line-height: 30px;
         }
+
+        html, body {
+          text-align: center;
+          padding-top: 40px;
+          
+          -webkit-perspective: 700px;
+             -moz-perspective: 700px;
+              -ms-perspective: 700px;
+                  perspective: 700px;
+        }
+        
+        /* Reset */
+        .button {
+          background: transparent;
+          border: 0;
+          padding: 0;
+          cursor: pointer;
+          outline: 0;
+          -webkit-appearance: none;
+        }
+        
+        /* Custom */
+        .button {
+          display: inline-block;
+          position: relative;
+          padding: 5px 10px;
+          top: 0;
+          font-size: 14px;
+          font-family: "Open Sans", Helvetica;
+          border-radius: 4px;
+          border-bottom: 1px solid rgba( 28, 227, 125, 0.5 );
+          background: #BF0001;
+          color: #fff;
+          box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1 );
+          
+          -webkit-transform: translateZ(0);
+             -moz-transform: translateZ(0);
+              -ms-transform: translateZ(0);
+                  transform: translateZ(0);
+          
+          -webkit-transition: all 0.2s ease;
+             -moz-transition: all 0.2s ease;
+              -ms-transition: all 0.2s ease;
+                  transition: all 0.2s ease;
+        }
+        
+        .button:active {
+          top: 0px;
+          box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0 );
+          background: rgba( 20, 224, 133, 1 );
+        }
       `
     ];
   }
@@ -80,7 +131,12 @@ class MyView3 extends connect(store)(PageViewElement) {
   render() {
     return html`
       <section>
-        <h2>Do your chore</h2>
+        <h2>Blacklist</h2>
+      </section>
+      <section>
+        <h3>Madeline Toll <input class="button" type="button" value="Report Sighting"/></h3>
+        <img src="../images/blacklist1.png" style="max-width: 100%; height: auto;"/>
+        <p>Alright brothers, the moment many of us have been waiting for has finally arrived. Maddie toll (pictured below) is now officially blacklisted. If you see her stomping around any part of our premises during the day OR night, please notify Beau, Ethan, or any other of e board ASAP!</p>
       </section>
     `;
   }
