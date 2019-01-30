@@ -43,7 +43,6 @@ class MyView4 extends PageViewElement {
         padding-bottom: 55%;
         height: 0;
         overflow: hidden;
-        translate: translateZ(-100);
     }
     .responsive-iframe-container iframe,   
     .vresponsive-iframe-container object,  
@@ -53,7 +52,6 @@ class MyView4 extends PageViewElement {
         left: 0;
         width: 100%;
         height: 100%;
-        translate: translateZ(-100);
     }
     </style>
 

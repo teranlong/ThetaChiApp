@@ -32,11 +32,13 @@ export const ButtonSharedStyles = css`
     font-size: 14px;
     font-family: "Open Sans", Helvetica;
     border-radius: 4px;
+    outline: none;
   }
 
   .button:active {
     transform: translateY(4px);
     background: #A60001;
     box-shadow: 0 1px #999;
+    outline: none;
   }
 `;
