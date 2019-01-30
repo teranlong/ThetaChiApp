@@ -17,9 +17,26 @@ export const ButtonSharedStyles = css`
     background: transparent;
     border: none;
     cursor: pointer;
+    color: red;
   }
 
   button:hover svg {
     fill: var(--app-primary-color);
+  }
+  
+  .button {
+    color: white;
+    background: #BF0001;
+    border: none;
+    box-shadow: 0 5px #999;
+    font-size: 14px;
+    font-family: "Open Sans", Helvetica;
+    border-radius: 4px;
+  }
+
+  .button:active {
+    transform: translateY(4px);
+    background: #A60001;
+    box-shadow: 0 1px #999;
   }
 `;

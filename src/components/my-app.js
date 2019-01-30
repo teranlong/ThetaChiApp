@@ -205,6 +205,7 @@ class MyApp extends connect(store)(LitElement) {
         <nav class="toolbar-list">
           <a ?selected="${this._page === 'view1'}" href="/view1">Dashboard</a>
           <a ?selected="${this._page === 'view4'}" href="/view4">Calendar</a>
+          <a ?selected="${this._page === 'view5'}" href="/view5">Chores</a>
           <a ?selected="${this._page === 'view2'}" href="/view2">House Points</a>
           <a ?selected="${this._page === 'view3'}" href="/view3">Blacklist</a>
         </nav>
@@ -217,6 +218,7 @@ class MyApp extends connect(store)(LitElement) {
         <nav class="drawer-list">
           <a ?selected="${this._page === 'view1'}" href="/view1">Dashboard</a>
           <a ?selected="${this._page === 'view4'}" href="/view4">Calendar</a>
+          <a ?selected="${this._page === 'view5'}" href="/view5">Chores</a>
           <a ?selected="${this._page === 'view2'}" href="/view2">House Points</a>
           <a ?selected="${this._page === 'view3'}" href="/view3">Blacklist</a>
         </nav>
@@ -226,13 +228,14 @@ class MyApp extends connect(store)(LitElement) {
       <main role="main" class="main-content">
         <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
         <my-view4 class="page" ?active="${this._page === 'view4'}"></my-view4>
+        <my-view5 class="page" ?active="${this._page === 'view5'}"></my-view5>
         <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
         <my-view3 class="page" ?active="${this._page === 'view3'}"></my-view3>
         <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
       </main>
 
       <footer>
-        <p>Made with &hearts; by the Polymer team.</p>
+        <p>Made with &hearts; by the 2019 Theta Chi Tech Chairs.</p>
       </footer>
 
       <snack-bar ?active="${this._snackbarOpened}">
