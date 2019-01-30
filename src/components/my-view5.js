@@ -14,7 +14,7 @@ import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
-class MyView4 extends PageViewElement {
+class MyView5 extends PageViewElement {
   static get styles() {
     return [
       SharedStyles
@@ -43,7 +43,6 @@ class MyView4 extends PageViewElement {
         padding-bottom: 55%;
         height: 0;
         overflow: hidden;
-        translate: translateZ(-100);
     }
     .responsive-iframe-container iframe,   
     .vresponsive-iframe-container object,  
@@ -53,13 +52,13 @@ class MyView4 extends PageViewElement {
         left: 0;
         width: 100%;
         height: 100%;
-        translate: translateZ(-100);
     }
     </style>
 
     <section>
-      <h2>Calendar</h2>
+      <h2>Chores</h2>
     </section>
+
     <div class="responsive-iframe-container big-container">
     <iframe src="https://calendar.google.com/calendar/embed?src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
     </div>
@@ -71,4 +70,4 @@ class MyView4 extends PageViewElement {
   }
 }
 
-window.customElements.define('my-view4', MyView4);
+window.customElements.define('my-view5', MyView5);
