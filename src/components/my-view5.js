@@ -64,7 +64,7 @@ class MyView5 extends PageViewElement {
     </div>
 
     <div class="responsive-iframe-container small-container">
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTDbWHQwc5OvmqkdZour6aTKjkMgQJ8drUYgu-R-zO2D7_Bf_WHPmMTIPbvCHtTsCZyp953HHUHlRza/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTDbWHQwc5OvmqkdZour6aTKjkMgQJ8drUYgu-R-zO2D7_Bf_WHPmMTIPbvCHtTsCZyp953HHUHlRza/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="z-index="0"></iframe>
     </div>
     `
   }

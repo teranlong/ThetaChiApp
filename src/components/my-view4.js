@@ -43,6 +43,8 @@ class MyView4 extends PageViewElement {
         padding-bottom: 55%;
         height: 0;
         overflow: hidden;
+        z-index: 0;
+
     }
     .responsive-iframe-container iframe,   
     .vresponsive-iframe-container object,  
@@ -52,6 +54,7 @@ class MyView4 extends PageViewElement {
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 0;
     }
     </style>
 
@@ -63,7 +66,7 @@ class MyView4 extends PageViewElement {
     </div>
 
     <div class="responsive-iframe-container small-container">
-    <iframe src="https://calendar.google.com/calendar/embed?title=Social%20Schedule&amp;showDate=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23ffcc33&amp;src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?title=Social%20Schedule&amp;showDate=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23ffcc33&amp;src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:0" z-index="0" frameborder="0" scrolling="no"></iframe>
     </div>
     `
   }
