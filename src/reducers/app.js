@@ -14,6 +14,8 @@ import {
   OPEN_SNACKBAR,
   CLOSE_SNACKBAR,
   UPDATE_DRAWER_STATE
+  // @redux-step import action names from cooresponding actions file
+  , LOGIN_USER
 } from '../actions/app.js';
 
 const INITIAL_STATE = {
@@ -50,6 +52,14 @@ const app = (state = INITIAL_STATE, action) => {
         ...state,
         snackbarOpened: false
       };
+
+    // @redux-step add case to catch dispatched action
+    case LOGIN_USER:
+      return {
+        ...state,
+        user: action.user
+      };
+
     default:
       return state;
   }

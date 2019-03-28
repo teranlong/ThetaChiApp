@@ -14,6 +14,10 @@ export const UPDATE_DRAWER_STATE = 'UPDATE_DRAWER_STATE';
 export const OPEN_SNACKBAR = 'OPEN_SNACKBAR';
 export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
 
+// @redux-step add new action name constant
+export const LOGIN_USER = 'LOGIN_USER';
+
+
 export const navigate = (path) => (dispatch) => {
   // Extract the page name from path.
   const page = path === '/' ? 'view1' : path.slice(1);
@@ -90,5 +94,13 @@ export const updateDrawerState = (opened) => {
   return {
     type: UPDATE_DRAWER_STATE,
     opened
+  };
+};
+
+// @redux-step create function to dispatch new action
+export const loginUser = (user) => {
+  return {
+    type: LOGIN_USER,
+    user
   };
 };

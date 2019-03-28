@@ -24,6 +24,8 @@ import {
   navigate,
   updateOffline,
   updateDrawerState
+  // @redux-step import action from cooresponding action file 
+  , loginUser
 } from '../actions/app.js';
 
 // These are the elements needed by this element.
@@ -42,6 +44,8 @@ class MyApp extends connect(store)(LitElement) {
       _drawerOpened: { type: Boolean },
       _snackbarOpened: { type: Boolean },
       _offline: { type: Boolean }
+      // @redux-step add cooresponding local property
+      , _user: { type: String }
     };
   }
 
@@ -191,13 +195,15 @@ d
     ];
   }
 
+
+
   render() {
     // Anything that's related to rendering should be done in here.
     return html`
       <!-- Header -->
       <app-header condenses reveals effects="waterfall">
         <app-toolbar class="toolbar-top">
-          <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
+          <button class="menu-btn" title="Menu" @click="${this._loginUser}">${menuIcon}</button>
           <div main-title>${this.appTitle}</div>
         </app-toolbar>
 
@@ -226,6 +232,7 @@ d
         </nav>
       </app-drawer>
 
+
       <!-- Main content -->
       <main role="main" class="main-content">
         <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
@@ -238,6 +245,10 @@ d
       </main>
 
       <footer>
+        
+      <!-- @redux-step use local property -->
+      ${this._user ? html`Welcome ${this._user}`: html`Please log in` }
+
         <p>Made with &hearts; by the 2019 Theta Chi Tech Chairs.</p>
       </footer>
 
@@ -280,11 +291,18 @@ d
     store.dispatch(updateDrawerState(e.target.opened));
   }
 
+  // @redux-step create local function for dispatching store action
+  _loginUser() {
+    store.dispatch(loginUser("Teran Long"));
+  }
+
   stateChanged(state) {
     this._page = state.app.page;
     this._offline = state.app.offline;
     this._snackbarOpened = state.app.snackbarOpened;
     this._drawerOpened = state.app.drawerOpened;
+    // @redux-step sync local properties with store values
+    this._user = state.app.user;
   }
 }
 
