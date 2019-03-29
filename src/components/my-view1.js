@@ -10,21 +10,48 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 import { html } from 'lit-element';
 import { PageViewElement } from './page-view-element.js';
+import { connect } from 'pwa-helpers/connect-mixin.js';
+
+// This element is connected to the Redux store.
+import { store } from '../store.js';
 
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
+import { loginUser } from '../actions/app.js';
 
-class MyView1 extends PageViewElement {
+// @react-step import custom element
+import './login-element.js';
+
+class MyView1 extends connect(store)(PageViewElement) {
+  static get properties() {
+    return {
+      // This is the data from the store.
+      _name: { type: String }
+    };
+  }
+
   static get styles() {
     return [
       SharedStyles
     ];
   }
 
+  _msg() {
+    console.log("Login recieved");
+  }
+
   render() {
+    console.log("Rendered");
     return html`
       <section>
         <h2>Dashboard</h2>
+
+        <!-- @react-step use custom element -->
+        <!-- listen for custom event defined in element class -->
+        <login-element
+          @user-login="${this._msg}">
+        </login-element>
+
         <p>Placehoder Text. Maybe make this an info feed or dashboard?</p>
         <p>It doesn't do anything other than display some static text right now.</p>
       </section>

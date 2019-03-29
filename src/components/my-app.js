@@ -16,6 +16,7 @@ import { installOfflineWatcher } from 'pwa-helpers/network.js';
 import { installRouter } from 'pwa-helpers/router.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
 
+// @redux-step import store
 // This element is connected to the Redux store.
 import { store } from '../store.js';
 
@@ -203,7 +204,7 @@ d
       <!-- Header -->
       <app-header condenses reveals effects="waterfall">
         <app-toolbar class="toolbar-top">
-          <button class="menu-btn" title="Menu" @click="${this._loginUser}">${menuIcon}</button>
+          <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
           <div main-title>${this.appTitle}</div>
         </app-toolbar>
 
@@ -297,6 +298,7 @@ d
   }
 
   stateChanged(state) {
+    // console.log("State changed!");
     this._page = state.app.page;
     this._offline = state.app.offline;
     this._snackbarOpened = state.app.snackbarOpened;
