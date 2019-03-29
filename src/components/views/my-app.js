@@ -18,7 +18,7 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 // @redux-step import store
 // This element is connected to the Redux store.
-import { store } from '../store.js';
+import { store } from '../../store.js';
 
 // These are the actions needed by this element.
 import {
@@ -27,15 +27,15 @@ import {
   updateDrawerState
   // @redux-step import action from cooresponding action file 
   , loginUser
-} from '../actions/app.js';
+} from '../../actions/app.js';
 
 // These are the elements needed by this element.
 import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
-import { menuIcon } from './my-icons.js';
-import './snack-bar.js';
+import { menuIcon } from '../shared/my-icons.js';
+import '../elements/snack-bar.js';
 
 class MyApp extends connect(store)(LitElement) {
   static get properties() {

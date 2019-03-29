@@ -9,12 +9,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { html } from 'lit-element';
-import { PageViewElement } from './page-view-element.js';
+import { PageViewElement } from '../shared/page-view-element.js';
 
 // These are the shared styles needed by this element.
-import { SharedStyles } from './shared-styles.js';
+import { SharedStyles } from '../shared/shared-styles.js';
 
-class MyView5 extends PageViewElement {
+class MyView4 extends PageViewElement {
   static get styles() {
     return [
       SharedStyles
@@ -43,6 +43,8 @@ class MyView5 extends PageViewElement {
         padding-bottom: 55%;
         height: 0;
         overflow: hidden;
+        z-index: 0;
+
     }
     .responsive-iframe-container iframe,   
     .vresponsive-iframe-container object,  
@@ -52,22 +54,22 @@ class MyView5 extends PageViewElement {
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 0;
     }
     </style>
 
     <section>
-      <h2>Chores</h2>
+      <h2>Calendar</h2>
     </section>
-
     <div class="responsive-iframe-container big-container">
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTDbWHQwc5OvmqkdZour6aTKjkMgQJ8drUYgu-R-zO2D7_Bf_WHPmMTIPbvCHtTsCZyp953HHUHlRza/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
     </div>
 
     <div class="responsive-iframe-container small-container" style="z-index:0;">
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTDbWHQwc5OvmqkdZour6aTKjkMgQJ8drUYgu-R-zO2D7_Bf_WHPmMTIPbvCHtTsCZyp953HHUHlRza/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false;z-index:0;"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?title=Social%20Schedule&amp;showDate=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23ffcc33&amp;src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:0;z-index:0;" frameborder="0" scrolling="no"></iframe>
     </div>
     `
   }
 }
 
-window.customElements.define('my-view5', MyView5);
+window.customElements.define('my-view4', MyView4);

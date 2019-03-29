@@ -33,29 +33,29 @@ export const navigate = (path) => (dispatch) => {
 const loadPage = (page) => (dispatch) => {
   switch(page) {
     case 'view1':
-      import('../components/my-view1.js').then((module) => {
+      import('../components/views/my-view1.js').then((module) => {
         // Put code in here that you want to run every time when
         // navigating to view1 after my-view1.js is loaded.
       });
       break;
     case 'view2':
-      import('../components/my-view2.js');
+      import('../components/views/my-view2.js');
       break;
       case 'view3':
-      import('../components/my-view3.js');
+      import('../components/views/my-view3.js');
       break;
     case 'view4':
-      import('../components/my-view4.js');
+      import('../components/views/my-view4.js');
       break;
     case 'view5':
-      import('../components/my-view5.js');
+      import('../components/views/my-view5.js');
       break;
     case 'view6':
-      import('../components/my-view6.js');
+      import('../components/views/my-view6.js');
       break;
     default:
       page = 'view404';
-      import('../components/my-view404.js');
+      import('../components/views/my-view404.js');
   }
 
   dispatch(updatePage(page));

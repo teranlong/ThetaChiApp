@@ -11,20 +11,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 import { LitElement, html, css } from 'lit-element';
 
 // These are the elements needed by this element.
-import { plusIcon, minusIcon } from './my-icons.js';
+import { plusIcon, minusIcon } from '../shared/my-icons.js';
 
 // These are the shared styles needed by this element.
-import { ButtonSharedStyles } from './button-shared-styles.js';
+import { ButtonSharedStyles } from '../shared/button-shared-styles.js';
 
 // @redux-step import store
 // This element is connected to the Redux store.
-import { store } from '../store.js';
+import { store } from '../../store.js';
 
 // @redux-step import action from cooresponding action file 
-// These are the actions needed by this element.
+// still a memeber of the actions/app.js class
 import {
   loginUser
-} from '../actions/app.js';
+} from '../../actions/app.js';
 
 // This is a reusable element. It is not connected to the store. You can
 // imagine that it could just as well be a third-party element that you
@@ -56,7 +56,7 @@ class LoginElement extends LitElement {
       <div>
         <p>
           <form @submit="${this._onLogin}">
-            Login here: <input @change="${this._setUser}" type="text" />
+            <input @change="${this._setUser}" type="text" />
             <button >submit</button>
           </form>
         </p>

@@ -9,33 +9,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { html, css } from 'lit-element';
-import { PageViewElement } from './page-view-element.js';
+import { PageViewElement } from '../shared/page-view-element.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 
 // This element is connected to the Redux store.
-import { store } from '../store.js';
+import { store } from '../../store.js';
 
-// These are the actions needed by this element.
-import { checkout } from '../actions/shop.js';
+// // These are the actions needed by this element.
+// import { checkout } from '../../actions/shop.js';
 
-// We are lazy loading its reducer.
-import shop, { cartQuantitySelector } from '../reducers/shop.js';
-store.addReducers({
-  shop
-});
+// // We are lazy loading its reducer.
+// import shop, { cartQuantitySelector } from '../../reducers/shop.js';
+// store.addReducers({
+//   shop
+// });
 
 // These are the shared styles needed by this element.
-import { SharedStyles } from './shared-styles.js';
-import { ButtonSharedStyles } from './button-shared-styles.js';
-import { addToCartIcon } from './my-icons.js';
+import { SharedStyles } from '../shared/shared-styles.js';
+import { ButtonSharedStyles } from '../shared/button-shared-styles.js';
 
 class MyView6 extends connect(store)(PageViewElement) {
   static get properties() {
-    return {
-      // This is the data from the store.
-      _quantity: { type: Number },
-      _error: { type: String }
-    };
+    return {};
   }
 
   static get styles() {
@@ -143,15 +138,9 @@ class MyView6 extends connect(store)(PageViewElement) {
     `;
   }
 
-  _checkoutButtonClicked() {
-    store.dispatch(checkout());
-  }
 
   // This is called every time something is updated in the store.
-  stateChanged(state) {
-    this._quantity = cartQuantitySelector(state);
-    this._error = state.shop.error;
-  }
+  stateChanged(state) {}
 }
 
 window.customElements.define('my-view6', MyView6);
