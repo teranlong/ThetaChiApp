@@ -98,6 +98,7 @@ class MyView6 extends connect(store)(PageViewElement) {
   render() {
     return html`
       <section>
+
         <h2>Meals</h2>
       </section>
       <section>
@@ -109,27 +110,27 @@ class MyView6 extends connect(store)(PageViewElement) {
           </tr>
           <tr>
             <td> Monday </td>
-            <td> Grilled Cheese, Tomato Soup, Salad Bar </td>
-            <td> Braised Beef, Mashed Potatoes, Green Beans </td>
+            <td> Breakfast </td>
+            <td> Steak, Baked Potatoes, Steamed Broccoli </td>
           </tr>
           <tr>
             <td> Tuesday </td>
-            <td> Breakfast </td>
-            <td> Yaki Soba with Chicken</td>
+            <td> Pizza </td>
+            <td> Fried Rice, Egg Rolls, Pot Stickers </td>
           </tr>
           <tr>
             <td> Wednesday </td>
             <td> Tacos </td>
-            <td> Meatloaf, Au Gratin Potatoes, Green Peas </td>
+            <td> Jerk Chicken, Carribean Rice, Mango Salsa </td>
           </tr>
           <tr>
             <td> Thursday </td>
-            <td> Chicken Sandwich </td>
-            <td> Salmon, Roasted Red Potatoes </td>
+            <td> Chicken Strips, Fries </td>
+            <td> Spaghetti, Caesar Salad </td>
           </tr>
           <tr>
             <td> Friday </td>
-            <td> Meatball Subs </td>
+            <td> Deli Bar, Soup </td>
             <td> Burgers </td>
           </tr>
         </table>
