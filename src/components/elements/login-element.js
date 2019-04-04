@@ -50,23 +50,21 @@ class LoginElement extends LitElement {
       `
     ];
   }
+  // f2() {
+  //   console.log("F2 called");
+  // }
 
   render() {
+
     return html`
       <div>
         <p>
-          <form @submit="${this._onLogin}">
-            <input @change="${this._setUser}" type="text" />
-            <button >submit</button>
-          </form>
+          <button  @click="${this.login}">
+                Connect with Facebook
+            </button>
         </p>
       </div>
     `;
-  }
-
-  constructor() {
-    super();
-    this._currentUser = null;
   }
 
   // @redux-step create local function for dispatching store action
@@ -81,6 +79,70 @@ class LoginElement extends LitElement {
     this._currentUser = e.target.value;
     console.log("user set to", e.target.value);
   }
+
+  constructor() {
+    super();
+    this._currentUser = null;
+    
+    console.log("Before FB Init");
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    window.fbAsyncInit = ()=> {
+      console.log("FB Init");
+        FB.init({
+          appId      : '958666841007764',
+          cookie     : true,  // enable cookies to allow the server to access 
+                              // the session
+          xfbml      : true,  // parse social plugins on this page
+          version    : 'v3.2' // The Graph API version to use for the call
+        });
+
+        FB.Event.subscribe('auth.statusChange', response => {
+            if (response.authResponse) {
+                this.checkLoginState();
+            } else {
+                console.log('[FacebookLoginButton] User cancelled login or did not fully authorize.');
+            }
+        });
+    };
+}
+
+checkLoginState(){
+    FB.getLoginStatus(function(response) {
+        this.statusChangeCallback(response);
+    }.bind(this));
+}
+
+login(){
+  console.log("Login Button PresseD!");
+    FB.login(this.checkLoginState(), {scope: 'email'});
+}
+
+statusChangeCallback(response) {
+    if (response.status === 'connected') {
+        this.testAPI();
+    } else if (response.status === 'not_authorized') {
+        console.log("[FacebookLoginButton] Person is logged into Facebook but not your app");
+    } else {
+        console.log("[FacebookLoginButton] Person is not logged into Facebook");
+    }
+}
+
+testAPI() {
+    FB.api('/me', function(response) {
+        console.log('[FacebookLoginButton] Successful login for: ', response);
+    });
+}
 }
 
 window.customElements.define('login-element', LoginElement);
