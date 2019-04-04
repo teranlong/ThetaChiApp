@@ -17,7 +17,6 @@ export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
 // @redux-step add new action name constant
 export const LOGIN_USER = 'LOGIN_USER';
 
-
 export const navigate = (path) => (dispatch) => {
   // Extract the page name from path.
   const page = path === '/' ? 'view1' : path.slice(1);
