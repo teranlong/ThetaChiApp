@@ -21,6 +21,11 @@ import { SharedStyles } from '../shared/shared-styles.js';
 // @react-step import custom element
 import '../elements/login-element.js';
 
+// Facebook Login
+// import { FacebookLogin } from 'react-facebook-login';
+// import FacebookLogin from 'react-facebook-login';
+// import '../elements/FacebookLoginButton.js';
+
 class MyView1 extends connect(store)(PageViewElement) {
   static get properties() {
     return {
@@ -41,23 +46,19 @@ class MyView1 extends connect(store)(PageViewElement) {
 
   render() {
     console.log("Rendered");
+
+    const responseFacebook = (response) => {
+      console.log(response);
+      }
+
     return html`
       <section>
         <h2>Dashboard</h2>
         <p>Placehoder Text. Maybe make this an info feed or dashboard?</p>
         <p>It doesn't do anything other than display some static text right now.</p>
-      </section>
-      <section>
-        <h2>
-          Login here: 
-        </h2>
-        <p style="text-align:center">
-          <!-- @react-step use custom element -->
-          <!-- listen for custom event defined in element class -->
-          <login-element
+        <login-element
             @user-login="${this._msg}">
-          </login-element>
-        </p>
+        </login-element>
       </section>
 
       <section>
@@ -75,3 +76,18 @@ class MyView1 extends connect(store)(PageViewElement) {
 }
 
 window.customElements.define('my-view1', MyView1);
+
+/*
+      <section>
+        <h2>
+          Login here: 
+        </h2>
+        <p style="text-align:center">
+          <!-- @react-step use custom element -->
+          <!-- listen for custom event defined in element class -->
+          <login-element
+            @user-login="${this._msg}">
+          </login-element>
+        </p>
+      </section>
+*/
