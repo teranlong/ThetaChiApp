@@ -65,7 +65,7 @@ class MyView4 extends PageViewElement {
     <iframe src="https://calendar.google.com/calendar/embed?src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
     </div>
 
-    <div class="responsive-iframe-container small-container" style="z-index:-9999; position: relative;">
+    <div class="responsive-iframe-container small-container" style="z-index:-1; position: relative;">
     <iframe src="https://calendar.google.com/calendar/embed?title=Social%20Schedule&amp;showDate=0&amp;showPrint=0&amp;showTz=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23ffcc33&amp;src=4p2e7cjorv167paas7bt3hgpmg%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FLos_Angeles" style="border-width:0;z-index:0;" frameborder="0" scrolling="no"></iframe>
     </div>
     `
