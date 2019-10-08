@@ -110,27 +110,27 @@ class MyView6 extends connect(store)(PageViewElement) {
           </tr>
           <tr>
             <td> Monday </td>
-            <td> Bratwurst, Corn Dogs </td>
-            <td> Moroccan Seasoned Chicken Titty, Couscus </td>
+            <td> Breakfast </td>
+            <td> Turkey Breast, Mashed Potatoes, Corn </td>
           </tr>
           <tr>
             <td> Tuesday </td>
-            <td> Pizza </td>
-            <td> Cajun Seasoned Cod, Rice Pilaf </td>
+            <td> Chicken Sandwich </td>
+            <td> Stroganoff </td>
           </tr>
           <tr>
             <td> Wednesday </td>
             <td> Tacos </td>
-            <td> Chicken Katsu, Yaki Soba Noodles </td>
+            <td> Jerk Chicken, Carribean Rice, Mango Salsa </td>
           </tr>
           <tr>
             <td> Thursday </td>
-            <td> Wings </td>
-            <td> Spaghetti </td>
+            <td> Chicken Wings, Salad Bar, Rice </td>
+            <td> Salmon, Roasted Potatoes, Asparagus </td>
           </tr>
           <tr>
             <td> Friday </td>
-            <td> Pulled Pork Sandwich </td>
+            <td> Pulled Pork Sandwich, Soup </td>
             <td> Burgers </td>
           </tr>
         </table>
