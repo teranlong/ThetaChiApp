@@ -134,7 +134,7 @@ class MyView6 extends connect(store)(PageViewElement) {
             <td> Burgers </td>
           </tr>
         </table>
-        <h3>4/29/19 Meals </h3>
+        <h3>10/7/19 Meals </h3>
       </section>
     `;
   }
